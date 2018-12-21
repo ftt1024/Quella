@@ -61,6 +61,14 @@ public class UserCoreController extends BaseController {
         menus = UserManager.checkMenuPermission(menus);
         modelAndView.addObject("menus",menus);
         WebSetting webSetting = webSettingService.selectById(1);
+        if ( webSetting == null) { // todo: 20181220
+            webSetting = new WebSetting();
+            webSetting.setId(1);
+            webSetting.setSigeSize(4);
+            webSetting.setWebName("fttily");
+            webSetting.setSignActiveTime(10);
+            webSetting.setFotterInfo("welcome.");
+        }
         modelAndView.addObject("websetting",webSetting);
         return modelAndView;
     }

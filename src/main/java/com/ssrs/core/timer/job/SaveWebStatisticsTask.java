@@ -30,7 +30,7 @@ public class SaveWebStatisticsTask {
         webVisitCount.setPvCount(VCache.get(APPUtil.PV_COUNT,Integer.class));
         webVisitCount.setCreateTime(DateUtil.date());
         webVisitCountService.insert(webVisitCount);
-        //初始化Redis缓存shuju
+        //初始化Redis缓存数据
         VCache.delSetByKey(APPUtil.IP_COUNT,null);
         VCache.set(APPUtil.PV_COUNT,0);
     }

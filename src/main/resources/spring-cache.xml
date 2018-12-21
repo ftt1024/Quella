@@ -25,9 +25,9 @@
 	    <constructor-arg index="2" value="6379"  name="port" type="int"/>
 	    <constructor-arg index="3" value="5000"  name="timeout" type="int"/>
 	    <constructor-arg index="1" value="localhost" name="host" type="java.lang.String"/>
-	    <!-- 如果你需要配置密码，请打开这里。
-	        <constructor-arg index="4" value="你的密码" name="password" type="java.lang.String"/>
-	    -->
+	    <!-- 如果你需要配置密码，请打开这里。-->
+		<constructor-arg index="4" value="123456" name="password" type="java.lang.String"/>
+
 	</bean>
 	<!--
 		这里之前的配置有问题，因为参数类型不一致，有时候jar和环境的问题，导致参数根据index对应，会处理问题，
